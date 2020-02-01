@@ -1,4 +1,5 @@
 using Domain;
+using Persistence.Maps;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
@@ -19,6 +20,7 @@ namespace Persistence
                     new Value {Id = 2, Name="Value 102"},
                     new Value {Id = 3, Name="Value 103"}
                 );
+            builder.ApplyConfiguration(new ValueMap());    
         }
         
     }
